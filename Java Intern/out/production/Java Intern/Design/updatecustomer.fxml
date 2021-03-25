@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="675.0" style="-fx-background-color: aqua;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UpdateCustomer">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="160.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="579.0" minWidth="10.0" prefWidth="456.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="454.0" minWidth="10.0" prefWidth="73.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="67.0" minHeight="5.0" prefHeight="67.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="164.0" minHeight="10.0" prefHeight="144.6" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="193.0" minHeight="10.0" prefHeight="144.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="150.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="162.0" minHeight="10.0" prefHeight="142.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Label style="-fx-font-size: 30; -fx-text-fill: Blue;" text="Update Customer" GridPane.columnIndex="1">
+            <GridPane.margin>
+                <Insets left="70.0" />
+            </GridPane.margin>
+        </Label>
+        <Label style="-fx-font-weight: bold;" text="Email Address : " GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets top="20.0" />
+            </GridPane.margin>
+        </Label>
+        <Label style="-fx-font-weight: bold;" text="Address : " GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets top="55.0" />
+            </GridPane.margin>
+        </Label>
+        <Label style="-fx-font-weight: bold;" text="Customer Name : " GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets top="20.0" />
+            </GridPane.margin>
+        </Label>
+        <Label style="-fx-font-weight: bold;" text="GST No. : " GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets bottom="65.0" />
+            </GridPane.margin>
+        </Label>
+        <Label style="-fx-font-weight: bold;" text="Mob. No. :" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets bottom="5.0" />
+            </GridPane.margin>
+        </Label>
+        <Button fx:id="update" mnemonicParsing="false" prefHeight="31.0" prefWidth="209.0" style="-fx-background-color: orange; -fx-text-fill: white;" text="Update" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets bottom="10.0" right="40.0" />
+            </GridPane.margin>
+        </Button>
+        <TextField fx:id="mob" maxWidth="-Infinity" prefWidth="440.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets right="10.0" />
+            </GridPane.margin>
+        </TextField>
+        <TextField fx:id="gstno" maxWidth="-Infinity" prefWidth="440.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets bottom="65.0" right="10.0" />
+            </GridPane.margin>
+        </TextField>
+        <TextField fx:id="addr" maxWidth="-Infinity" prefHeight="47.0" prefWidth="440.0" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets bottom="20.0" right="10.0" />
+            </GridPane.margin>
+        </TextField>
+        <TextField fx:id="name" prefHeight="31.0" prefWidth="440.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets right="10.0" top="15.0" />
+            </GridPane.margin>
+        </TextField>
+        <TextField fx:id="email" maxWidth="-Infinity" prefWidth="440.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets right="10.0" top="18.0" />
+            </GridPane.margin>
+        </TextField>
+        <Label fx:id="warn" alignment="CENTER" prefHeight="25.0" prefWidth="445.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+            <GridPane.margin>
+                <Insets bottom="10.0" />
+            </GridPane.margin>
+        </Label>
+        <Label style="-fx-font-weight: bold;" text="Customer Type : " GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+        <Label style="-fx-font-weight: bold;" text="State : " GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets top="5.0" />
+            </GridPane.margin>
+        </Label>
+        <TextField fx:id="state" maxWidth="-Infinity" prefHeight="31.0" prefWidth="440.0" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+        <RadioButton fx:id="rdreg" mnemonicParsing="false" text="Regular" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <GridPane.margin>
+                <Insets bottom="30.0" />
+            </GridPane.margin>
+        </RadioButton>
+        <RadioButton fx:id="rdp" mnemonicParsing="false" text="Premium" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+            <GridPane.margin>
+                <Insets bottom="30.0" />
+            </GridPane.margin>
+        </RadioButton>
+        <RadioButton fx:id="rdn" mnemonicParsing="false" text="New" GridPane.columnIndex="1" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets top="40.0" />
+            </GridPane.margin>
+        </RadioButton>
+        <RadioButton fx:id="rdo" mnemonicParsing="false" prefHeight="22.0" prefWidth="86.0" text="Others" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets top="40.0" />
+            </GridPane.margin>
+        </RadioButton>
+        <TextField fx:id="panno" maxWidth="-Infinity" prefHeight="31.0" prefWidth="440.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+        <Label style="-fx-font-weight: bold;" text="PAN No. : " GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets top="5.0" />
+            </GridPane.margin>
+        </Label>
+    </children>
+</GridPane>

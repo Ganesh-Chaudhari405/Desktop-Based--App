@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="DB.User" table="uuser">
+        <id name="uname">
+            <column name="name" sql-type="varchar(50)" not-null="false"/>
+        </id>
+        <property name="pass">
+            <column name="pass" sql-type="varchar(50)" not-null="false"/>
+        </property>
+        <property name="qname">
+            <column name="qname" sql-type="text"/>
+        </property>
+        <property name="ans">
+            <column name="ans" sql-type="varchar(50)"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="time">
+            <column name="time" sql-type="time"/>
+        </property>
+    </class>
+
+
+    <class name="DB.Customer" table="customer">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(300)" unique="true"/>
+        </property>
+        <property name="mob">
+            <column name="mobile" sql-type="varchar(20)"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(150)"/>
+        </property>
+        <property name="addr">
+            <column name="addr" sql-type="text"/>
+        </property>
+        <property name="gstno">
+            <column name="gstno" sql-type="varchar(50)"/>
+        </property>
+        <property name="pending">
+            <column name="pending" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+        <property name="deposited">
+            <column name="deposited" sql-type="numeric(12,2)" default="0.0"/>
+        </property>
+        <property name="ddate">
+            <column name="ddate" sql-type="date"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+
+        <property name="panno" access="">
+            <column name="panno" sql-type="varchar(50)" unique="true"/>
+        </property>
+
+        <property name="state">
+            <column name="state" sql-type="varchar(50)"/>
+        </property>
+
+        <property name="msg">
+            <column name="msg" sql-type="varchar(60)"></column>
+        </property>
+
+        <property name="custtype">
+            <column name="custype" sql-type="varchar(50)"></column>
+        </property>
+
+        <property name="custfile">
+            <column name="custfile" sql-type="varchar(50)"></column>
+        </property>
+
+    </class>
+
+
+
+    <class name="DB.Product" table="pproduct">
+        <id name="id1">
+            <column name="id1" sql-type="bigint"/>
+            <generator class="native"/>
+
+        </id>
+
+        <property name="prodname">
+            <column name="Prodname" sql-type="varchar(290)" unique="true"/>
+        </property>
+
+        <property name="dom">
+            <column name="dom" sql-type="varchar(50)"  />
+        </property>
+
+        <property name="hsn">
+            <column name="hsn" sql-type="varchar(50)" />
+        </property>
+
+        <property name="gst">
+            <column name="gst" sql-type="varchar(40)"/>
+        </property>
+
+        <property name="idd">
+            <column name="idd" sql-type="int" default="1"/>
+        </property>
+
+    </class>
+
+
+    <class name="DB.Feedback" table="feedback">
+        <id name="id">
+            <column name="id" sql-type="bigint"/>
+            <generator class="native"/>
+        </id>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="varchar(50)"/>
+        </property>
+        <property name="Feedmsg">
+            <column name="feedmsg" sql-type="varchar(50)"/>
+        </property>
+        <property name="rating">
+            <column name="rating" sql-type="varchar(100)"/>
+        </property>
+        <property name="d">
+            <column name="d" sql-type="int" default="1"/>
+        </property>
+        <many-to-one name="customer" class="DB.Customer" column="cid" cascade="none" not-null="false"/>
+    </class>
+
+
+
+
+</hibernate-mapping>
