@@ -1,9 +1,10 @@
 # JAVA-Desktop Based App
 This app is just prototype we can use for Feed management.
-# Technologies
-Frameworks of JAVA
-Hibernate
-JAVAFX
+Developed Desktop based feed management application which stores user details,feedbacks,products details,customer details etc.
+This app will help small feed shops to manage customers.
 
-# Database
-  PostgreSQL
+# Technologies
+Frameworks of JAVA: Hibernate,JAVAFX
+PostgreSQL
+# For Better Understanding
+
